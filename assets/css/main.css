@@ -31,8 +31,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
   #header {
     height: 10vh;
+    width: 100%;
     background-color: red;
   }
   #hero {
