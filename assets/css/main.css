@@ -30,40 +30,6 @@
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    overflow: visible;
-  }
-  #header {
-    height: 10vh;
-    width: 100%;
-    background-color: red;
-  }
-  #hero {
-    height: 100vh;
-    background-color: palegreen;
-  }
-  #home2 {
-    height: 100vh;
-    background-color: yellow;
-  }
-  #home3 {
-    background-color: blue;
-  }
-  .container-content-home3 {
-    height: auto;
-    width: max-content;
-    background-color: #102c57;
-  }
-  #clients {
-    background-color: pink;
-    margin-top: -20px;
-  }
-  #contact {
-    background-color: #388da8;
-    margin-bottom: 0px;
-  }
-}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -134,6 +100,12 @@ h6 {
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
+  }
+
+  .header .btn-getstarted {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 15px;
   }
 
   .header .navmenu {
@@ -343,8 +315,7 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 99999;
-    background-color: red;
-    /*background-color: var(--contrast-color);*/
+    background-color: var(--contrast-color);
     box-shadow: 0px 0px 30px
       color-mix(in srgb, var(--default-color), transparent 90%);
   }
@@ -445,6 +416,134 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    margin: 0;
+    height: 25%;
+    width: 100%;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 99999;
+    background-color: var(--contrast-color);
+    box-shadow: 0px 0px 30px
+      color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.5s ease-in-out;
+    box-shadow: none;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown > .dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: black;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 100000;
+  }
+
+  .mobile-nav-active .navmenu > ul {
+    display: block;
+  }
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -1179,7 +1278,7 @@ section,
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-image: url("/assets/img/2.png"); */
+  background-image: url("/assets/img/2.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -2802,3 +2901,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+.starter-section {
+  /* Add your styles here */
+}
