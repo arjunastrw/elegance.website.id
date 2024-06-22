@@ -97,19 +97,24 @@ h6 {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
+  .header {
+    background-color: rebeccapurple;
+    width: 100%;
+  }
   .header .logo {
-    order: 1;
+    order: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+    padding: 0;
   }
 
   .header .btn-getstarted {
     order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
-  }
-
-  .header .navmenu {
-    order: 3;
   }
 }
 
@@ -1182,7 +1187,7 @@ section,
 }
 /* Max 640px  */
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .hero {
     display: flex;
     justify-content: center;
@@ -2461,10 +2466,11 @@ section,
   border-top-color: var(--background-color);
   animation: animate-loading 1s linear infinite;
 }
-.contact .php-email-form h3 {
+.contact .php-email-form label {
   color: black;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: var(--default-font);
 }
 
 .contact .php-email-form input[type="text"],
