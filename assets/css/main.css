@@ -2988,8 +2988,8 @@ section,
 /*--------------------------------------------------------------
 # About US
 --------------------------------------------------------------*/
-.starter-section {
-  height: 50vh;
+#hero-about {
+  height: 100vh;
 }
 .container-about {
   height: 80vh;
@@ -3024,6 +3024,43 @@ section,
 .text-about .text-paragraph p:nth-child(3) {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero-about {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-about {
+    margin-top: 25px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-about {
+    margin-top: 10px;
+    width: 90%;
+  }
+
+  .text-about .text-paragraph {
+    height: auto;
+    width: 100%;
+  }
+
+  .text-about .text-paragraph p {
+    font-size: 20px;
+  }
+
+  .text-about .text-paragraph p:first-child,
+  .text-about .text-paragraph p:nth-child(2),
+  .text-about .text-paragraph p:nth-child(3) {
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -3129,6 +3166,49 @@ section,
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
+
+@media screen and (max-width: 1400px) {
+  #service-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #service-details .service-box1 {
+    flex-direction: row;
+    gap: 20px;
+    margin-left: -200px;
+  }
+
+  #service-details .service-container {
+    max-width: 300px;
+    height: auto;
+    box-shadow: none;
+  }
+
+  #service-details .service-container .service-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  #service-details .service-container .service-title {
+    margin-top: 10px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #service-details .service-container .service-title h1 {
+    font-size: 22px;
+  }
+
+  #service-details .service-container .service-title div {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: none;
+  }
+}
+
 
 @media screen and (max-width: 800px) {
   #service-details {
